@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Formulario Registro</title>
+</head>
+<body>
+  <main class="login-container">
+    <h1 data-cy="title" class="title-form">Registrarse</h1>
+    <form aria-label="formulario de registro">
+      <fieldset class="label-input">
+        <input data-cy="username-field" class="inputs" type="text" id="username" required minlength="1"
+        name="username" autocomplete="username">
+        <label data-cy="username-advice" class="labels" for="username">Nombre de Usuario</label>
+      </fieldset>
+      <fieldset class="label-input">
+        <input data-cy="password-field" class="inputs" type="password" id="password" required minlength="1"
+        name="password" autocomplete="current-password">
+        <label data-cy="password-advice" class="labels" for="password">Contraseña</label>
+      </fieldset>
+      <fieldset class="label-input">
+        <input data-cy="email-field" class="inputs" type="text" id="email" required minlength="1"
+        name="email">
+        <label data-cy="email-advice" class="labels" for="email">Correo Electronico</label>
+      </fieldset>
+      <fieldset class="label-input" id="birthay-date">
+        <p data-cy="fecha-nacimiento-advice" class="fecha">Fecha de Nacimiento</p>
+        <div class="date-containers">
+          <div class="dummy">
+            <input data-cy="day-field" class="inputs" type="number" id="day" required name="day">
+            <label data-cy="day-advice" class="labels" id="dummy-children" for="day">Dia</label>
+          </div>
+          <div class="dummy">
+            <input data-cy="month-field" class="inputs" type="number" id="month" required name="month">
+            <label data-cy="month-advice" class="labels" id="dummy-children" for="month">Mes</label>
+          </div>
+          <div class="dummy">
+            <input data-cy="year-field" class="inputs" type="number" id="year" required name="year">
+            <label data-cy="year-advice" class="labels" id="dummy-children" for="year">Año</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="buttons-field">
+        <div class="radio-checker">
+          <input data-cy="checkbox-1" class="text-radio" type="radio" name="genero" value="m" id="genre" required aria-label="seleccionar genero masculino">
+          <label data-cy="text-checkbox-1" class="checkbox-1">Masculino</label>  
+          <input data-cy="checkbox-2" class="text-radio" type="radio" name="genero" value="f" id="genre" required aria-label="seleccionar genero femenino">
+          <label data-cy="text-checkbox-2" class="checkbox-1">Femenino</label>
+        </div>
+        <p data-cy="error-text" class="advice" hidden>Aqui los errores</p>
+        <button data-cy="send-button" type="button" class="button-submit">Registrarse</button>
+      </fieldset>
+    </form>
+   </main>
+   <script type="module" src="script.js"></script>
+</body>
+</html>
+
+<!-- Hacer que el boton azul haga algo cuando es seleccionado -->
